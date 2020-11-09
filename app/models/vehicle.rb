@@ -1,4 +1,5 @@
 class Vehicle < ApplicationRecord
     belongs_to :seller
-    belongs_to :purchase
+    has_one :purchase
+    #has_one buyer, through: :purchase
 end
