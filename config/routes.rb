@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :vehicles
 
-  # show 'purchases'
+  resources :purchases
+
+  post "/vehicles/:id/make_purchase", to: 'vehicles#make_purchase'
 
 end

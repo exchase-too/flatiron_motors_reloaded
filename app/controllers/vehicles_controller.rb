@@ -8,5 +8,8 @@ class VehiclesController < ApplicationController
         @vehicle = Vehicle.find_by(id: params[:id])
     end
 
+    def make_purchase
+        byebug
+    end
 
 end

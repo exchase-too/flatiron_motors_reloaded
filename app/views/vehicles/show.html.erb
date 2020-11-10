@@ -1,5 +1,4 @@
-
-<h1><%= @vehicle.year.to_s + ' ' + @vehicle.make + ' ' + @vehicle.model %></h1></br>
+/* <h1><%= @vehicle.year.to_s + ' ' + @vehicle.make + ' ' + @vehicle.model %></h1></br> */
 
 <img src= "<%= @vehicle.img_url %>" ><br></br>
 
@@ -10,3 +9,4 @@ Description: <%= @vehicle.description %></br>
 Price: <%= @vehicle.price %></br>
 Seller: <%= @vehicle.seller.name %></br>
 
+<%= button_to "Buy Me!", action: "make_purchase" %>
