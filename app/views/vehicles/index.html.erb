@@ -1,0 +1,9 @@
+<h1>List of Vehicles:</h1></br>
+
+<ul>
+<% @vehicles.each do |vehicle| %>
+    <li>
+    <%= link_to vehicle.make, "/vehicles/#{vehicle.id}" %>
+    </li>
+<% end %>
+</ul>
