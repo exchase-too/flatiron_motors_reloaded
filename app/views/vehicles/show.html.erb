@@ -1,1 +1,12 @@
-<h1><%= @vehicle.make %></h1>
+
+<h1><%= @vehicle.year.to_s + ' ' + @vehicle.make + ' ' + @vehicle.model %></h1></br>
+
+<img src= "<%= @vehicle.img_url %>" ><br></br>
+
+Make: <%= @vehicle.make %></br>
+Model: <%= @vehicle.model %></br>
+Year: <%= @vehicle.year %></br>
+Description: <%= @vehicle.description %></br>
+Price: <%= @vehicle.price %></br>
+Seller: <%= @vehicle.seller.name %></br>
+

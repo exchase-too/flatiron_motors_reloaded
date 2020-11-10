@@ -3,7 +3,7 @@
 <ul>
 <% @vehicles.each do |vehicle| %>
     <li>
-    <%= link_to vehicle.make, "/vehicles/#{vehicle.id}" %>
+    <%= link_to  vehicle.year.to_s + ' ' + vehicle.make + ' ' + vehicle.model, "/vehicles/#{vehicle.id}" %>
     </li>
 <% end %>
 </ul>
