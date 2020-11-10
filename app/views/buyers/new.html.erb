@@ -1,9 +1,6 @@
 <%= form_for @buyer do |f| %>
-    Username: <%= f.text_field :username %></br></br>
-
-    Password: <%= f.text_field :password %></br></br>
-
-    Confirm Password: <%= f.text_field :confirm_password %></br></br>
-
-    <%= f.submit %>
-<% end %>
+        Name: <%= f.text_field :name %>
+        Password: <%= f.password_field :password %>
+        Password Confirmation: <%= f.password_field :password_confirmation %>
+        <%= f.submit "Submit" %>
+      <% end %>
