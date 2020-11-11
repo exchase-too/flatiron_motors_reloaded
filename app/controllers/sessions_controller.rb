@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
     def destroy
       session.delete :name
-      redirect_to (login page?), action: (?)
+     # redirect_to (login page?), action: (?)
     end
     
 end
