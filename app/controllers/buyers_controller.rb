@@ -5,12 +5,18 @@ class BuyersController < ApplicationController
     end
 
     def create
-        Buyer.create(buyer_params)
+        if params[:buyer][:password] == params[:buyer][:password_confirmation]
+            @buyer = Buyer.create(buyer_params)
+            byebug
+        else #display error msg (no validations!)
+        redirect_to new_buyer_path #(return to login page)
+        end
+
     end
 
     private
     def buyer_params
-        params.require(:buyer).permit(:name, :password, :password_confirmation)
+        params.require(:buyer).permit(:name, :password, is_seller: false)
     end
     
 end
