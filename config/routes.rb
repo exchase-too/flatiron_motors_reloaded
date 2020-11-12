@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   resources :vehicles
   resources :purchases
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  post '/logout' => 'sessions#destroy'
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/sessions', to: 'sessions#create', as: 'new_session'
+  post '/logout', to: 'sessions#destroy', as: 'logout'
 
 
   post "/vehicles/:id/make_purchase", to: 'vehicles#make_purchase'
