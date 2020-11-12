@@ -3,6 +3,10 @@ class SessionsController < ApplicationController
     def new
     end
 
+    def login
+        @buyer = Buyer.new
+    end
+
     def create
         @buyer = Buyer.find_by(name: params[:name])
         return head(:forbidden) unless @buyer.authenticate(params[:password])
