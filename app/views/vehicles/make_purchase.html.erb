@@ -6,6 +6,7 @@
 <p><%= "#{@vehicle.year}" + " " + "#{@vehicle.make}" + " " + "#{@vehicle.model}" %></p>
 
 Seller: <%= @vehicle.seller.name %></p>
-Total Price: <%= number_with_delimiter(@vehicle.price) %></br>
+Total Price: $<%= number_with_delimiter(@vehicle.price) %></br>
+<% byebug %>
 
 <%= button_to "Go Back", vehicles_path, :method => :get %>
