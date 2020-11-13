@@ -7,6 +7,8 @@ class BuyersController < ApplicationController
     def create
         if params[:buyer][:password] == params[:buyer][:password_confirmation]
             @buyer = Buyer.create(buyer_params)
+            @buyer.is_seller = false
+            @buyer.save
             redirect_to vehicles_path
         else #display error msg (no validations!)
         redirect_to new_buyer_path #(return to login page)
