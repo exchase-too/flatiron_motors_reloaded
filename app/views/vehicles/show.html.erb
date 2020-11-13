@@ -3,11 +3,11 @@
 <img src= "<%= @vehicle.img_url %>" >
 <br>
 
-<p><%= "#{@vehicle.year}" + " " + "#{@vehicle.make}" + " " + "#{@vehicle.model}" %></p>
-
+<p><%= "#{@vehicle.year}" + " " + "#{@vehicle.make}" + " " + "#{@vehicle.model}" %></p></br>
+Description: <%= @vehicle.description %></br>
 Seller: <%= @vehicle.seller.name %></p>
-Price: <%= number_with_delimiter(@vehicle.price) %></br>
+Price: <%= number_with_delimiter(@vehicle.price) %></br></br>
 
 
-<%= button_to "Buy Me!", action: "make_purchase" %>
+<%= button_to "Buy Me!", action: "make_purchase" %></b></br>
 <%= button_to "Go Back", vehicles_path, :method => :get %>

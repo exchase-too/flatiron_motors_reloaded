@@ -2,10 +2,10 @@
 
 <%= form_with url: new_session_path do |f| %>
 
-Username: <%= f.text_field :name %><br>
+Username: <%= f.text_field :name %></br></br>
 
-Password: <%= f.text_field :password %><br>
+Password: <%= f.password_field :password %></br></br>
 
-<%= f.submit %>
+<%= f.submit "Login" %>
   
 <% end %> 

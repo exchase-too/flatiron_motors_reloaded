@@ -1,0 +1,11 @@
+<h1> Congratulations on your new <%= @vehicle.year.to_s + ' ' + @vehicle.make + ' ' + @vehicle.model %>!</h1></br>
+
+<img src= "<%= @vehicle.img_url %>" >
+<br>
+
+<p><%= "#{@vehicle.year}" + " " + "#{@vehicle.make}" + " " + "#{@vehicle.model}" %></p>
+
+Seller: <%= @vehicle.seller.name %></p>
+Total Price: <%= number_with_delimiter(@vehicle.price) %></br>
+
+<%= button_to "Go Back", vehicles_path, :method => :get %>
