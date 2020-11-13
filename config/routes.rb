@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # get 'seller/new', to: 'sellers#new'
   # post 'sellers'
-
+  resources :sellers
   resources :vehicles
   resources :purchases
 

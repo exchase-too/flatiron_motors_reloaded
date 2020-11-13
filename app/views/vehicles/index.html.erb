@@ -1,9 +1,12 @@
 <h1>List of Vehicles:</h1></br>
 
-<ul>
-<% @vehicles.each do |vehicle| %>
-    <li>
-    <%= link_to  vehicle.year.to_s + ' ' + vehicle.make + ' ' + vehicle.model, "/vehicles/#{vehicle.id}" %>
-    </li>
+<%= @vehicles.each do |vehicle| %>
+        <img src="<%= vehicle.img_url %>"></ br>
+        <p><%= "#{vehicle.year}" + " " + "#{vehicle.make}" + " " + "#{vehicle.model}" %></p>
+        <p><%= vehicle.description %></p>
+        <p>Sold by: <%= vehicle.seller.name %></p>
+        <p><%= link_to "Click here for more information", vehicle_path(vehicle), :method => :get %></p>
+
 <% end %>
-</ul>
+
+
